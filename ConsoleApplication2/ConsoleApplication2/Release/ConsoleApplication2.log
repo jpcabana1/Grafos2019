@@ -1,0 +1,11 @@
+﻿  pch.cpp
+  Grafo.cpp
+  Matriz.cpp
+  NO.cpp
+c:\users\gabinator 2.0\source\repos\consoleapplication2\consoleapplication2\no.cpp(10): warning C4101: 'aux': unreferenced local variable
+  Generating code
+  95 of 96 functions (99.0%) were compiled, the rest were copied from previous compilation.
+    85 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  ConsoleApplication2.vcxproj -> C:\Users\Gabinator 2.0\source\repos\ConsoleApplication2\Release\Grafo.exe
