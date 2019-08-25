@@ -9,11 +9,11 @@
 
 using namespace std;
 
-void converteListaPraMatriz(NO *Ladj[], int *mat[6],  int *Conv[6])
+void converteListaPraMatriz(NO *Ladj[], int *Conv[6])
 {
 	NO *aux;
 	int i;
-	
+
 	aux = Ladj[0];
 	if (aux == NULL)
 		return;
@@ -30,16 +30,17 @@ void converteListaPraMatriz(NO *Ladj[], int *mat[6],  int *Conv[6])
 			aux = Ladj[i];
 		}
 	}
-	
+
 }
 
-void converteMatrizPraLista(NO *Ladj[], int *mat[6], NO *Conv[])
+void converteMatrizPraLista(int *mat[6], NO *Conv[])
 {
 	for (int i = 0; i < TAM; i++) {
 		for (int j = 0; j < TAM; j++)
 		{
 			if (mat[i][j] == 1)
-				inserir(Conv, i, j+1);
+				inserir(Conv, i, j);
 		}
 	}
 }
+

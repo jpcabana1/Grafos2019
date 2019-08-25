@@ -1,3 +1,4 @@
+
 #include "pch.h"
 #include "NO.h"
 
@@ -52,11 +53,41 @@ void exibe(NO *Ladj[], int nVertices) {
 	cout << "Lista de adjacencia\n";
 	for (int i = 0; i < nVertices; i++) {
 		aux = Ladj[i];
-		cout << to_string(i + 1) + ": ";
+		//cout << to_string(i + 1) + ": ";
 		while (aux != NULL) {
 			cout << to_string(aux->valor) + " ";
 			aux = aux->prox;
 		}
 		cout << endl;
 	}
+}
+
+
+int ler_grafo(const char caminho[100], NO*Ladj[]) {
+	FILE* arquivo;
+	int v, sucessor;
+	int numVertices = 0;
+	arquivo = fopen(caminho, "r");
+
+	if (arquivo == NULL) {
+		printf("Erro: nao foi possivel abrir o arquivo.\n");
+	}
+	else {
+		//le a primeira linha		
+		fscanf(arquivo, "%d", &numVertices);
+
+		//le cada uma das demais linhas
+		for (v = 0; v < numVertices; v++) {
+			fscanf(arquivo, "%d", &sucessor);
+
+			while (sucessor != -1) {
+				inserir(Ladj, v, sucessor);
+				fscanf(arquivo, "%d", &sucessor);
+			}
+		}
+
+		fclose(arquivo);
+		return numVertices;
+	}
+
 }
