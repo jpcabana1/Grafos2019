@@ -152,12 +152,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BFS.h" />
     <ClInclude Include="Matriz.h" />
     <ClInclude Include="NO.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="tools.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BFS.cpp" />
     <ClCompile Include="Grafo.cpp" />
     <ClCompile Include="Matriz.cpp" />
     <ClCompile Include="NO.cpp" />

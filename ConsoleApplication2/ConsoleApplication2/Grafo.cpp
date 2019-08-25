@@ -7,6 +7,7 @@
 #include "NO.h"
 #include "Matriz.h"
 #include "tools.h"
+#include "BFS.h"
 
 #define TAM 6
 #define tamMAT 6
@@ -47,6 +48,9 @@ int main()
 	converteMatrizPraLista(m, novoGrafo);
 	exibe(novoGrafo, TAM);
 	
+	BFS(grafo, 0, TAM);
+
+
 	system("pause");
 
 }
